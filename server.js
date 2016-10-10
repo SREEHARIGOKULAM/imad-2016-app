@@ -9,10 +9,6 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/ui/main.js', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'main.js'));
-});
-
 app.get('/article-one', function (req, res) {
      res.send('Article one requested and will be served here');
 });   
@@ -28,6 +24,11 @@ app.get('/article-three', function (req, res) {
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
+
+app.get('/ui/main.js', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'main.js'));
+});
+
 
 app.get('/ui/si.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'si.png'));
